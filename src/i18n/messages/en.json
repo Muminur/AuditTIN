@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "title": "Audit Status Portal",
+    "titleTemplate": "{page} · Audit Status Portal",
+    "description": "Enter your 12-digit TIN to check whether you were selected for tax audit (Assessment Year 2023–2024) on the NBR list. Unofficial convenience tool — verify with NBR."
+  },
+  "common": {
+    "appName": "Audit Status Portal",
+    "appNameShort": "Audit Status",
+    "tagline": "Tax audit selection · AY 2023–2024",
+    "unofficial": "Unofficial",
+    "language": "Language",
+    "switchToBangla": "বাংলা",
+    "switchToEnglish": "English",
+    "skipToContent": "Skip to content",
+    "loading": "Loading…",
+    "backHome": "Back to lookup"
+  },
+  "nav": {
+    "home": "Lookup",
+    "statistics": "Statistics",
+    "about": "About",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "admin": "Official console"
+  },
+  "home": {
+    "eyebrow": "National Board of Revenue · audit selection",
+    "headline": "Were you selected for tax audit?",
+    "subhead": "Enter your 12-digit Taxpayer Identification Number to check the published audit-selection list for Assessment Year 2023–2024.",
+    "tinLabel": "Taxpayer Identification Number (TIN)",
+    "tinHint": "12 digits. Nothing you type is stored or shared.",
+    "verify": "Verify status",
+    "verifying": "Verifying…",
+    "clear": "Clear",
+    "checkAnother": "Check another TIN",
+    "privacyNote": "Your TIN never appears in the address bar, browser history, or any log.",
+    "statsTeaser": "{count} individuals were selected across {zones} tax zones.",
+    "statsTeaserLink": "See the statistics",
+    "exampleNote": "This deployment runs on a clearly-labelled sample dataset for demonstration."
+  },
+  "result": {
+    "selectedTitle": "Selected for audit",
+    "selectedBody": "This TIN appears on the audit-selection list for Assessment Year 2023–2024.",
+    "notSelectedTitle": "Not on the list",
+    "notSelectedBody": "This TIN was not found on the audit-selection list for Assessment Year 2023–2024.",
+    "fieldZone": "Tax zone",
+    "fieldCircle": "Circle",
+    "fieldType": "Submission type",
+    "fieldAY": "Assessment year",
+    "fieldTin": "TIN",
+    "nextStepsSelected": "What this means",
+    "nextStepsSelectedBody": "Selection means your return for this year may be examined. Keep your supporting documents ready and follow any notice issued by your tax circle. This portal is unofficial — confirm with the NBR or your circle office.",
+    "nextStepsNotSelected": "What this means",
+    "nextStepsNotSelectedBody": "Your TIN is not on this particular published list. This does not by itself guarantee you will never be audited. Always rely on official NBR communication.",
+    "verifyWithNbr": "Verify with NBR",
+    "asOf": "List published {date}"
+  },
+  "errors": {
+    "tinTooShort": "A TIN is 12 digits. You've entered {count}.",
+    "tinNonDigit": "A TIN is digits only. Remove any letters or symbols.",
+    "tinEmpty": "Enter your 12-digit TIN to check.",
+    "rateLimited": "Too many checks from this connection. Try again in {seconds} seconds.",
+    "server": "Something went wrong on our side. Try again in a moment.",
+    "network": "Couldn't reach the server. Check your connection and try again.",
+    "notFoundPageTitle": "Page not found",
+    "notFoundPageBody": "The page you're looking for doesn't exist.",
+    "genericPageTitle": "Something went wrong",
+    "genericPageBody": "An unexpected error occurred. Please try again."
+  },
+  "stats": {
+    "title": "Selection statistics",
+    "subtitle": "Aggregate counts for the published audit-selection list (Assessment Year 2023–2024). No identifying information — counts only.",
+    "totalSelected": "Individuals selected",
+    "zonesCovered": "Tax zones",
+    "circlesCovered": "Circles",
+    "byZoneTitle": "Selections by tax zone",
+    "byZoneSubtitle": "Number of selected individuals in each zone.",
+    "topCirclesTitle": "Top circles",
+    "topCirclesSubtitle": "Circles with the most selections.",
+    "byTypeTitle": "By submission type",
+    "tableZone": "Zone",
+    "tableCircle": "Circle",
+    "tableCount": "Selected",
+    "tableShare": "Share",
+    "noData": "Statistics are not available right now.",
+    "countOnlyNote": "These figures contain no TINs and cannot identify any individual."
+  },
+  "about": {
+    "title": "About this portal",
+    "intro": "The Audit Status Portal is an unofficial convenience tool. It lets a person enter their 12-digit Taxpayer Identification Number (TIN) and instantly learn whether that TIN appears on the National Board of Revenue (NBR) audit-selection list for Assessment Year 2023–2024.",
+    "sourceTitle": "Where the data comes from",
+    "sourceBody": "The list is sourced from the NBR audit-selection publication for Assessment Year 2023–2024 ({label}, published {date}). This site mirrors only what NBR has already published — nothing more.",
+    "meaningTitle": "What audit selection means",
+    "meaningBody": "Being selected means your income-tax return for the year may be examined in detail. It is a routine compliance process, not an accusation. If you are selected, keep your supporting records ready and respond to any notice from your tax circle.",
+    "nextTitle": "What to do next",
+    "nextBody": "Whether or not your TIN appears here, treat NBR's own communication as authoritative. Visit your tax circle office or the official NBR website to confirm your status and obtain guidance.",
+    "unofficialTitle": "This is not an official NBR service",
+    "unofficialBody": "This portal is provided for convenience only. It is not operated by, endorsed by, or affiliated with the National Board of Revenue. Always verify your status through official channels."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Short answers to common questions about this portal.",
+    "items": {
+      "what": {
+        "q": "What does this site tell me?",
+        "a": "It tells you whether your exact 12-digit TIN is on the published NBR audit-selection list for Assessment Year 2023–2024, and if so, the tax zone, circle, and submission type recorded against it."
+      },
+      "official": {
+        "q": "Is this an official NBR website?",
+        "a": "No. This is an unofficial convenience tool. The National Board of Revenue is the only authoritative source. Always confirm your status through official NBR channels."
+      },
+      "store": {
+        "q": "Do you store my TIN?",
+        "a": "No. Your TIN is checked against an in-memory list and the result is shown immediately. It is never written to a log, never placed in the web address, and never added to your browser history."
+      },
+      "partial": {
+        "q": "Can I search by name or part of a TIN?",
+        "a": "No. Only an exact 12-digit match is supported. There is no name search, partial search, or autocomplete — this is a deliberate privacy protection."
+      },
+      "notListed": {
+        "q": "My TIN isn't on the list. Am I safe from audit?",
+        "a": "Not being on this particular list does not guarantee you will never be audited. Always rely on official NBR communication for your tax obligations."
+      },
+      "wrong": {
+        "q": "The result looks wrong. What should I do?",
+        "a": "This site reflects a published snapshot and may differ from NBR's live records. If something looks wrong, contact your tax circle or the NBR directly — their records are authoritative."
+      },
+      "year": {
+        "q": "Which year does this cover?",
+        "a": "Only Assessment Year 2023–2024, from the corresponding published list. Other years are not included."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy",
+    "subtitle": "How this portal protects the people it serves.",
+    "intro": "This portal is designed so that checking your own status is easy, while making mass enumeration no easier than the already-public list.",
+    "points": {
+      "exact": {
+        "t": "Exact match only",
+        "d": "Lookups require a full, exact 12-digit TIN. There is no partial search, wildcard, prefix search, autocomplete, or \"did you mean\" — by design."
+      },
+      "noLog": {
+        "t": "Your TIN is never logged",
+        "d": "TINs are not written to application logs, analytics, or error reports. Each lookup is served with no-store and leaves no trace on our side."
+      },
+      "noUrl": {
+        "t": "Never in the URL or history",
+        "d": "Your TIN never appears in the web address, query string, browser history, or any shareable link. Results render inline only."
+      },
+      "noBulk": {
+        "t": "No bulk access",
+        "d": "There is no bulk download or list-everyone endpoint. Public statistics contain counts only — never TINs."
+      },
+      "rateLimit": {
+        "t": "Rate limited",
+        "d": "Every lookup is rate limited to discourage scraping and automated enumeration."
+      },
+      "minimal": {
+        "t": "Minimal data",
+        "d": "The portal holds no personal information beyond the fields NBR already published: zone, circle, submission type, and assessment year."
+      }
+    },
+    "contact": "For questions about your actual tax status, contact the National Board of Revenue directly."
+  },
+  "footer": {
+    "disclaimer": "Unofficial tool. Not affiliated with the National Board of Revenue. Verify your status with NBR.",
+    "dataset": "Dataset: {label} · published {date}",
+    "rights": "Provided for public convenience.",
+    "builtWith": "Privacy-first lookup — no TIN is stored or logged."
+  },
+  "admin": {
+    "consoleTitle": "Official console",
+    "loginTitle": "Sign in",
+    "loginSubtitle": "Authorised officials only. All access is logged.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in…",
+    "signOut": "Sign out",
+    "signedInAs": "Signed in as {email}",
+    "loginError": "Sign-in failed. Check your email and password.",
+    "notAuthorised": "This account is not on the allowlist.",
+    "browseTitle": "Browse selections",
+    "searchPlaceholder": "Search by exact TIN, zone, or circle",
+    "filterZone": "Filter by zone",
+    "filterCircle": "Filter by circle",
+    "filterType": "Filter by type",
+    "allZones": "All zones",
+    "allCircles": "All circles",
+    "allTypes": "All types",
+    "search": "Search",
+    "reset": "Reset",
+    "export": "Export",
+    "exportCsv": "Export CSV",
+    "exportXlsx": "Export Excel",
+    "unmaskLabel": "Unmask TINs in export",
+    "maskNote": "TINs are masked by default. Unmasking is recorded in the audit log.",
+    "colTin": "TIN",
+    "colZone": "Zone",
+    "colCircle": "Circle",
+    "colType": "Type",
+    "colAy": "AY",
+    "resultsCount": "{count} of {total} records",
+    "noResults": "No records match your filters.",
+    "page": "Page {page} of {pages}",
+    "prev": "Previous",
+    "next": "Next",
+    "auditLogTitle": "Recent activity",
+    "loading": "Loading…"
+  }
+}

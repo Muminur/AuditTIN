@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+/* ───────────────────────────────────────────────────────────────────────
+   Audit Status Portal — "Midnight Ledger" design tokens (Tailwind v4 @theme).
+   Concept: a precise official instrument — a verification terminal.
+   ─────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Palette */
+  --color-ink: #0a1f1a;
+  --color-ink-2: #0f2a22;
+  --color-ink-3: #143a2f;
+  --color-nbr-green: #006a4e;
+  --color-jade: #2fbf8f;
+  --color-jade-soft: #7fd9bd;
+  --color-stamp: #f4b740;
+  --color-stamp-soft: #f8d488;
+  --color-paper: #f5f7f4;
+  --color-mute: #8fa89c;
+  --color-line: #1d3b31;
+
+  /* Fonts — loaded via next/font and exposed as CSS variables on <html>.
+     Hind Siliguri sits in every Latin stack so Bangla glyphs always resolve. */
+  --font-display:
+    var(--font-space-grotesk), var(--font-hind-siliguri), ui-sans-serif,
+    system-ui, sans-serif;
+  --font-sans:
+    var(--font-inter), var(--font-hind-siliguri), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-mono:
+    var(--font-ibm-plex-mono), ui-monospace, "Cascadia Code", monospace;
+  --font-bangla: var(--font-hind-siliguri), var(--font-inter), sans-serif;
+
+  /* Radii */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Motion */
+  --animate-scan: scan 0.9s ease-in-out;
+  --animate-stamp: stamp 0.45s cubic-bezier(0.2, 0.8, 0.2, 1.2);
+  --animate-reveal: reveal 0.5s ease-out both;
+  --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+}
+
+@keyframes stamp {
+  0% {
+    transform: scale(1.6) rotate(-8deg);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-4deg);
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-height: 100dvh;
+  }
+
+  /* Subtle ledger grid backdrop. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      radial-gradient(
+        circle at 50% -10%,
+        rgba(0, 106, 78, 0.22),
+        transparent 55%
+      ),
+      linear-gradient(rgba(143, 168, 156, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(143, 168, 156, 0.04) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      44px 44px,
+      44px 44px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--color-stamp);
+    color: var(--color-ink);
+  }
+
+  /* Visible keyboard focus everywhere (quality floor). */
+  :focus-visible {
+    outline: 2px solid var(--color-jade);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* ── Components / utilities ───────────────────────────────────────────── */
+@layer components {
+  .card {
+    background: color-mix(in srgb, var(--color-ink-2) 92%, transparent);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(4px);
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.7rem;
+    color: var(--color-jade-soft);
+  }
+}
+
+/* ── Reduced motion: disable all decorative animation ─────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
