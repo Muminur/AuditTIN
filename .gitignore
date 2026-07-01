@@ -51,3 +51,4 @@ yarn-error.log*
 
 # stray local server logs
 *.log
+.env*
